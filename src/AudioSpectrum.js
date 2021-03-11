@@ -5,7 +5,7 @@ module.exports = class AudioSpectrum {
   constructor (visualizer) {
     this.analyser = null
     this.visualizer = visualizer
-    this.visualizer.subscribe(function (ctx) { this.analyser.updateFftSize(ctx.fftSize) }.bind(this))
+    this.visualizer.subscribe(function (ctx) { this.analyser && this.analyser.updateFftSize(ctx.fftSize) }.bind(this))
     this.eventEmitter = new EventEmitter()
     this.eventEmitter.on('draw', () => {
       window.requestAnimationFrame(this.draw.bind(this))

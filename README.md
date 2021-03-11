@@ -17,8 +17,8 @@ Visualizer with dynamic adjust based on sceen and css with no performance downsc
 ```js
 // <canvas ref="canvasWrapper" style="width: 100%; height: 90px" />
 
-import { Howl } from 'howler'
-import { AudioSpectrum, BlockVisualizer } from 'audio-flow'
+import { Howl, Howler } from 'howler'
+import { BlockVisualizer, AudioSpectrum } from 'audio-flow'
 
 const options = {
   blockWidth: 2,
@@ -36,7 +36,7 @@ const soundHowl = new Howl({
   autoplay: false
 })
 
-as.audio = soundHowl
+as.setAudio(this.soundHowl, Howler.ctx)
 
 soundHowl?.play()
 ```

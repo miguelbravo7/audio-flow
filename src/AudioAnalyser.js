@@ -3,7 +3,6 @@ module.exports = class AudioAnalyser {
     this.ready = false
     this.spectrum = []
     this.howl = howl
-    console.log(howl)
     this.analyserNode = ctx.createAnalyser() // Sound analysis node
     this.updateFftSize(fftSize)
     howl.on('play', () => {

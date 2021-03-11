@@ -11,7 +11,9 @@ module.exports = class BlockVisualizer extends BaseVisualizer {
       colors: this.colors = ['#b6b6b6'],
       gradientStops: this.gradientStops = [],
       playbackColors: this.playbackColors = ['#e66465', '#c75db5', '#9198e5'],
-      playbackGradientStops: this.playbackGradientStops = [0.3, 0.7]
+      playbackGradientStops: this.playbackGradientStops = [0.3, 0.7],
+      particleFallTime: this.particleFallTime = 128,
+      particleFallSpeed: this.particleFallSpeed = 32
     } = options)
     this.remnantStartPoints = []
     this.remnantCurrentPoints = []
@@ -84,12 +86,12 @@ module.exports = class BlockVisualizer extends BaseVisualizer {
       const t = this.remnantTicks[i]
       if (!start) { continue }
 
-      const e = timestamp - t - 64
+      const e = timestamp - t - this.particleFallTime
       if (e <= 0) {
         this.remnantCurrentPoints[i] = start
         continue
       }
-      const p = start - Math.floor(e / 32)
+      const p = start - Math.floor(e / this.particleFallSpeed)
       this.remnantCurrentPoints[i] = p
       if (p < 0) {
         this.remnantStartPoints[i] = 0
