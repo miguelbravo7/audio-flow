@@ -12,5 +12,3 @@ module.exports = {
   BlockVisualizer,
   SolidVisualizer
 }
-
-console.log(module.exports);

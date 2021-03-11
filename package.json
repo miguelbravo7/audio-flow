@@ -1,12 +1,15 @@
 {
   "name": "audio-flow",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Interactive navigable audio visualization",
   "main": "index.js",
   "files": [
     "index.js",
     "src"
   ],
+  "engines": {
+    "node": "~15.10.0"
+  },
   "type": "commonjs",
   "repository": {
     "type": "git",
