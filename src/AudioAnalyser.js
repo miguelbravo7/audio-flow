@@ -1,4 +1,4 @@
-export default class AudioAnalyser {
+module.exports = class AudioAnalyser {
   constructor (howl, fftSize, ctx) {
     this.ready = false
     this.spectrum = []

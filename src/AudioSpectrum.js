@@ -1,6 +1,6 @@
-import AudioAnalyser from './AudioAnalyser.js'
-import EventEmitter from 'events'
-export default class AudioSpectrum {
+const EventEmitter = require('events')
+const AudioAnalyser = require('./AudioAnalyser.js')
+module.exports = class AudioSpectrum {
   constructor (visualizer) {
     this.analyser = null
     this.visualizer = visualizer

@@ -1,6 +1,6 @@
-import BaseVisualizer from './BaseVisualizer.js'
+const BaseVisualizer = require('./BaseVisualizer.js')
 
-export default class BlockVisualizer extends BaseVisualizer {
+module.exports = class BlockVisualizer extends BaseVisualizer {
   constructor (options) {
     super(options);
     ({
