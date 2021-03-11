@@ -1,11 +1,10 @@
-const { Howler } = require('howler')
-
-module.exports = class AudioAnalyser {
-  constructor (howl, fftSize) {
+export default class AudioAnalyser {
+  constructor (howl, fftSize, ctx) {
     this.ready = false
     this.spectrum = []
     this.howl = howl
-    this.analyserNode = Howler.ctx.createAnalyser() // Sound analysis node
+    console.log(howl)
+    this.analyserNode = ctx.createAnalyser() // Sound analysis node
     this.updateFftSize(fftSize)
     howl.on('play', () => {
       this.audioSource = howl._sounds[0]._node.bufferSource

@@ -1,6 +1,6 @@
-const BaseVisualizer = require('./BaseVisualizer')
+import BaseVisualizer from './BaseVisualizer.js'
 
-module.exports = class SolidVisualizer extends BaseVisualizer {
+export default class SolidVisualizer extends BaseVisualizer {
   constructor (options) {
     super(options);
     ({

@@ -1,6 +1,6 @@
-const AudioAnalyser = require('./AudioAnalyser')
-const EventEmitter = require('events')
-module.exports = class AudioSpectrum {
+import AudioAnalyser from './AudioAnalyser.js'
+import EventEmitter from 'events'
+export default class AudioSpectrum {
   constructor (visualizer) {
     this.analyser = null
     this.visualizer = visualizer
@@ -14,14 +14,13 @@ module.exports = class AudioSpectrum {
 
   get canvas () { return this.visualizer?.canvas }
   get isReady () { return this.analyser?.isReady && this.visualizer != null }
-  get audio () { return this.analyser }
-  set audio (howl) { this.analyser = new AudioAnalyser(howl, this.visualizer.fftSize) }
   get playback () { return this.analyser.howl.seek() / this.analyser.howl.duration() }
   set playback (position) {
     this.analyser.howl.seek(position * this.analyser.howl.duration())
     if (this.analyser.howl.playing()) { this.analyser.howl.pause(); this.analyser.howl.play() }
   }
 
+  setAudio (howl, ctx) { this.analyser = new AudioAnalyser(howl, this.visualizer.fftSize, ctx) }
   destroy () { this.analyser?.destroy() }
 
   draw (timestamp) {

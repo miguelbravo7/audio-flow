@@ -1,11 +1,11 @@
-const AudioAnalyser = require('./src/AudioAnalyser')
-const AudioSpectrum = require('./src/AudioSpectrum')
+import AudioAnalyser from './src/AudioAnalyser.js'
+import AudioSpectrum from './src/AudioSpectrum.js'
 
-const BaseVisualizer = require('./src/visualizer/BaseVisualizer')
-const BlockVisualizer = require('./src/visualizer/BlockVisualizer')
-const SolidVisualizer = require('./src/visualizer/SolidVisualizer')
+import BaseVisualizer from './src/visualizer/BaseVisualizer.js'
+import BlockVisualizer from './src/visualizer/BlockVisualizer.js'
+import SolidVisualizer from './src/visualizer/SolidVisualizer.js'
 
-module.exports = {
+export {
   AudioAnalyser,
   AudioSpectrum,
   BaseVisualizer,

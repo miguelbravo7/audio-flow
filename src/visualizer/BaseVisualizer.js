@@ -1,4 +1,4 @@
-module.exports = class BaseVisualizer {
+export default class BaseVisualizer {
   constructor ({ canvas }) {
     this._canvas = canvas
     const context = this.canvas.getContext('2d')
