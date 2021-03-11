@@ -5,7 +5,7 @@ Interactive navigable audio visualization with two predefined visualizers.
 This project is a remake of [studiomikan's](https://github.com/studiomikan/pon-audio-spectrum) project, rewritten on js as a downloadable npm package, with optimizations and added features.
 
 ```sh
-npm install @miguelbravo7/audio-flow
+npm install audio-flow
 ```
 
 ## BlockVisualizer
@@ -18,8 +18,7 @@ Visualizer with dynamic adjust based on sceen and css with no performance downsc
 // <canvas ref="canvasWrapper" style="width: 100%; height: 90px" />
 
 import { Howl } from 'howler'
-import AudioSpectrum from '../assets/js/pon-audio/AudioSpectrum.js'
-import BlockVisualizer from '../assets/js/pon-audio/visualizer/BlockVisualizer.js'
+import { AudioSpectrum, BlockVisualizer } from 'audio-flow'
 
 const options = {
   blockWidth: 2,

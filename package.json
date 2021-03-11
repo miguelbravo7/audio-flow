@@ -1,6 +1,6 @@
 {
   "name": "audio-flow",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Interactive navigable audio visualization",
   "main": "index.js",
   "files": [
@@ -19,7 +19,8 @@
     "visualization",
     "sound",
     "music",
-    "AudioNode"
+    "AudioNode",
+    "Howler"
   ],
   "author": "Miguelbravo7 <miguelbravo7@gmail.com> (https://github.com/miguelbravo7)",
   "license": "MIT",
