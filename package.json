@@ -1,0 +1,31 @@
+{
+  "name": "audio-flow",
+  "version": "1.0.0",
+  "description": "Interactive navigable audio visualization",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "src"
+  ],
+  "type": "commonjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguelbravo7/audio-flow.git"
+  },
+  "keywords": [
+    "audio",
+    "visualization",
+    "sound",
+    "music",
+    "AudioNode"
+  ],
+  "author": "Miguelbravo7 <miguelbravo7@gmail.com> (https://github.com/miguelbravo7)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miguelbravo7/audio-flow/issues"
+  },
+  "homepage": "https://github.com/miguelbravo7/audio-flow#readme",
+  "dependencies": {
+    "howler": "^2.2.1"
+  }
+}
